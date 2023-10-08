@@ -1,0 +1,7 @@
+.env
+.vscode
+cache
+coverage
+coverage.json
+artifacts
+node_modules
