@@ -20,6 +20,14 @@ module.exports = {
             url: process.env.POLYGON_ACCESSPOINT_URL,
             blockNumber: 48487827
         }
+    },
+    mumbai: {
+        chainId: 80001,
+        timeout: 20000,
+        gasPrice: 8000000000,
+        url: process.env.POLYGON_MUMBAI_ACCESSPOINT_URL,
+        from: process.env.POLYGON_ACCOUNT,
+        accounts: [process.env.POLYGON_PRIVATE_KEY]
     }
   }
 };

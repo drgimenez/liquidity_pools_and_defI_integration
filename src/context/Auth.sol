@@ -16,12 +16,28 @@ abstract contract Auth {
     }
 
     /// EXTERNAL FUNCTIONS
+
+    /// ---------------------------------------------------------------------------------------------
+    /// @notice Add a new owner to the contract
+    /// @dev Throw if the sender is not an owner with error NotAnOwner()
+    /// @dev Throw if the owner address is zero with error ZeroAddress()
+    /// --------------------------------------------------------------------------------------------
+    /// @param _owner The address of the owner to add
+    /// --------------------------------------------------------------------------------------------
     function addOwner(address _owner) external onlyOwner() isZeroAddress(_owner) {
         ownerIndex++;
         owner[_owner] = true;
         emit AddOwner(msg.sender, _owner);
     }
 
+    /// ---------------------------------------------------------------------------------------------
+    /// @notice Remove an owner from the contract
+    /// @dev Throw if the sender is not an owner with error NotAnOwner()
+    /// @dev Throw if the owner address is zero with error ZeroAddress()
+    /// @dev Throw if the owner to remove is the last owner with error LastOwner()
+    /// --------------------------------------------------------------------------------------------
+    /// @param _owner The address of the owner to add
+    /// --------------------------------------------------------------------------------------------
     function removeOwner(address _owner) external onlyOwner() isZeroAddress(_owner) isNotLastOwner() {
         ownerIndex--;
         delete owner[_owner];
