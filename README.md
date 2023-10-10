@@ -1,4 +1,4 @@
-# DERA:Liquidity pools and DeFi protocols integration
+# DERA: Liquidity pools and DeFi protocols integration
 ##### Author: David Gimenez Gutierrez
 
 ## Objective
@@ -27,6 +27,7 @@ The following objectives are defined for this implementation.
     * Accounts with many funds in MATIC and USDC were impersonated to carry out the tests
     * OpenZeppelin reentrancyGuard was implemented in the contracts and the verification effect interaction pattern was used to prevent reentry attacks.
     * Comment follow the Ethereum ´Natural Specification´ language format (´natspec´) Referencia: https://docs.soliditylang.org/en/v0.8.16/natspec-format.html  
+    * Use of assembly, try-catch and predefined errors. *Pending adding events.*
 
 ## Solution Summary
 
